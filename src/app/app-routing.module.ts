@@ -7,7 +7,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
+  { path: 'archery', loadChildren: () => import('./archery/archery.module').then(m => m.ArcheryModule) }
 ];
 
 @NgModule({
