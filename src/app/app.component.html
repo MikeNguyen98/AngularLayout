@@ -1,17 +1,31 @@
-<header class="'w-full flex items-center header">
-  <div class="container flex items-center h-full header_pc">
-    <a routerLink="/">
-      <img
-        src="/assets/images/logo.png"
-        width="100"
-        height="50"
-        class="h-full"
-        alt="logo"
-    /></a>
-  </div>
-</header>
-<main>
-  <router-outlet></router-outlet>
+<div class="theme-black">
+  <header class="w-full flex items-center header">
+    <div class="container flex items-center header_pc">
+      <a routerLink="/" class="h-full flex items-center">
+        <img
+          src="/assets/images/logo.png"
+          width="100"
+          height="50"
+          class="h-full"
+          alt="logo"
+      /></a>
+      <div class="menu_container">
+        <ul class="menu_left flex items-center">
+          <li>
+            <a routerLink="/portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a routerLink="/contact-us">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="main scrollbar-hover flex flex-col">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
   <footer class="flex">
     <div class="flex flex-col">
       <a routerLink="/">
@@ -22,8 +36,7 @@
           class="h-full"
           alt="logo"
       /></a>
-        VIETNAM
+      VIETNAM
     </div>
   </footer>
-</main>
-<!-- <app-heroes></app-heroes> -->
+</div>

@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @font-face {
   font-family: "Manrope";
@@ -64,7 +64,7 @@
     #e35f19 87.5%
   );
   --color-bg-gra-secondary: linear-gradient(180deg, #8d8d8d 0%, #4d4c4c 100%);
-  --color-bg-opa-primary: rgba(255, 255, 255, 0.07);
+  --color-bg-opa-primary: #518ef8;
   --color-bg-opa-hover: #45456e;
   --color-bg-opa-search: #323144;
   --color-bg-second-btn: radial-gradient(
@@ -179,6 +179,22 @@
   margin-left: auto;
 }
 
+.main {
+  overflow-x: hidden;
+  //height: calc(100vh - 50px);
+  min-height: calc(var(--vh) * 100 - 50px);
+  max-height: calc(var(--vh) * 100 - 50px);
+  min-height: -webket-fill-available;
+  max-height: -webket-fill-available;
+  overflow-y: overlay;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (min-width: 576px) {
+    min-height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+  }
+}
 ol,
 ul {
   list-style: none;
@@ -323,4 +339,141 @@ menu,
 nav,
 section {
   display: block;
+}
+body {
+  min-width: 920px;
+  background: var(--color-bg-tertiary);
+  color: var(--custom-color-white);
+  // overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  background-color: var(--color-bg-opa-primary);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  @media screen and (min-width: 576px) {
+    height: 72px;
+  }
+  .header {
+    &__button-login {
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 16px;
+      background: #363636;
+      border-radius: 20px;
+      border: unset;
+      color: var(--text-color-orange);
+      font-size: var(--fs-16);
+      line-height: 20px;
+      margin-right: 1rem;
+    }
+    &__button-register {
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 16px;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 20px;
+      background: var(--custom-color-orange);
+      color: #fff;
+      font-size: var(--fs-16);
+      line-height: 20px;
+    }
+  }
+}
+
+.logo {
+  padding-top: 7.5px;
+  // align-self: center;
+}
+
+.scrollbar-hover {
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+  &:hover::-webkit-scrollbar {
+    display: block !important;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #555555;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+}
+.theme-white {
+  --colors-primary: #000000;
+  --colors-background: #f1f1f1;
+  --colors-sub-category: #313131;
+  --color-sub-category-background: #e5e6ec;
+  --color-icon-view-count: #606060;
+  --color-sidebar-background: #ffffff;
+  --color-sidebar-background-active: rgba(0, 0, 0, 0.1);
+  --color-search-background: #f1f1f1;
+  --color-search-color: #606060;
+  --color-icon: #313131;
+  --color-border-bottom: #e5e9eb;
+  --color-category-header: #cccccc;
+
+  background: #ffffff;
+  color: #000000;
+
+  input::placeholder {
+    color: #000000;
+  }
+}
+.theme-black {
+  --colors-primary: #ffffff;
+  --colors-background: #000000;
+  --colors-sub-category: #fffcfe;
+  --color-sub-category-background: rgba(255, 255, 255, 0.35);
+  --color-icon-view-count: rgba(255, 252, 254, 0.65);
+  --color-sidebar-background: #1e1e1e;
+  --color-sidebar-background-active: #363636;
+  --color-search-background: #363636;
+  --color-search-color: rgba(255, 252, 254, 0.65);
+  --color-icon: #ffffff;
+  --color-border-bottom: rgba(255, 255, 255, 0.1);
+  --color-category-header: #323232;
+  --color-interpunct: #eae8e9;
+  --color-background-search-dropdown: #1f1f1f;
+
+  color: #ffffff;
+
+  .input-search {
+    &::-webkit-input-placeholder {
+      color: var(--color-search-color);
+    }
+    &:-moz-placeholder {
+      color: var(--color-search-color);
+      opacity: 1; /* Firefox */
+    }
+    &::-moz-placeholder {
+      color: var(--color-search-color);
+      opacity: 1; /* Firefox */
+    }
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--color-search-color);
+      opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: var(--color-search-color);
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: var(--color-search-color);
+    }
+  }
 }
