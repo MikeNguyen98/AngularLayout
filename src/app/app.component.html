@@ -1,52 +1,112 @@
 <div class="theme-white">
-	<header class="w-full flex items-center header">
-		<div class="container flex items-center header_pc">
-			<a routerLink="/" class="h-full flex items-center">
-				<img src="/assets/images/20210916_Silver Sea_logo_small.jpg" width="100" height="50" class="h-full" alt="logo" /></a>
-			<div class="menu_container">
-				<ul class="menu_left flex items-center">
-					<li>
-						<a class="header-text" routerLink="/the-archery">The Archery</a>
-					</li>
-					<li>
-						<a class="header-text">Digital Consulting</a>
-					</li>
-					<li>
-						<a class="header-text">Digital Innovation</a>
-					</li>
-					<li>
-						<a class="header-text">Industries</a>
-					</li>
-					<li>
-						<a class="header-text" routerLink="/the-archery">Digital Venture</a>
-					</li>
-					<li>
-						<a class="header-text">Resource</a>
-					</li>
-					<li>
-						<a class="header-text" routerLink="/the-archery">Careers</a>
-					</li>
-					<li>
-						<button pButton class="header-text">Contact us</button>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</header>
-	<section class="main scrollbar-hover flex flex-col">
-		<div class="container">
-			<router-outlet></router-outlet>
-		</div>
-	</section>
-	<footer class="flex flex-row justify-content-evenly">
-			<div class="col-2">
-				<div>
-					{{ CONSTANT.COMPANY_INFO.COMPANY_NAME }}
-				</div>
-				<div>Office: Số 5 ngõ 514 đường Hoàng Hoa Thám, Phường Bưởi, Quận Tây Hồ, Thành phố Hà Nội, Việt Nam</div>
-			</div>
-			<div class="col-2"></div>
-			<div class="col-2"></div>
-			<div class="col-2"></div>
-	</footer>
+  <header class="w-full flex items-center header">
+    <div class="container flex items-center header_pc">
+      <a routerLink="/" class="h-full flex items-center">
+        <img
+          src="/assets/images/20210916_Silver Sea_logo_final.png"
+          width="100"
+          height="50"
+          class="h-full"
+          alt="logo"
+      /></a>
+      <div class="menu_container">
+        <ul class="menu_left flex items-center">
+          <li routerLinkActive="active">
+            <a class="header-text" routerLink="/the-archery">The Archery</a>
+          </li>
+          <li routerLinkActive="active">
+            <a class="header-text">Digital Consulting</a>
+          </li>
+          <li routerLinkActive="active">
+            <a class="header-text">Digital Innovation</a>
+          </li>
+          <li routerLinkActive="active">
+            <a class="header-text">Industries</a>
+          </li>
+          <li routerLinkActive="active">
+            <a class="header-text" routerLink="/digital-venture"
+              >Digital Venture</a
+            >
+          </li>
+          <li routerLinkActive="active">
+            <a class="header-text">Resource</a>
+          </li>
+          <li routerLinkActive="active">
+            <a class="header-text" routerLink="/careers">Careers</a>
+          </li>
+          <li routerLinkActive="active">
+            <button pButton class="header-text" routerLink="/contact-us">
+              Contact us
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="flex flex-col">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+  <footer class="flex flex-row justify-content-evenly footer">
+    <div class="footer__addr flex justify-between">
+      <div class="flex">
+        <h1 class="footer__logo">
+          <img
+            src="/assets/images/20210916_Silver Sea_logo_final.png"
+            width="150"
+            height="50"
+            alt="logo"
+          />
+        </h1>
+        <div class="ml-4">
+          <h2 class="text-xl">Contact</h2>
+
+          <address>
+            Office: Số 5 ngõ 514 đường Hoàng Hoa Thám, Phường Bưởi, Quận Tây Hồ,
+            Thành phố Hà Nội, Việt Nam<br />
+            <a class="footer__btn" href="tel:(+84)868985990"
+              >Call us: (+84)868985990</a
+            >
+            <a class="footer__btn" href="mailto:​STEVEN@SILVERSEA-ANALYTICS.COM"
+              >Email us: ​STEVEN@SILVERSEA-ANALYTICS.COM</a
+            >
+          </address>
+        </div>
+      </div>
+      <div>
+        <p class="text-xl">Technology</p>
+
+        <ul class="text-base">
+          <li>
+            <a href="#business-analyst">Business Analyst</a>
+          </li>
+
+          <li>
+            <a href="#process-automation">Process Automation</a>
+          </li>
+
+          <li>
+            <a href="#data-analyst">BI and ​​Data Analytics</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xl">Legal</p>
+
+        <ul class="text-base">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex legal justify-center">
+      <p>&copy; 2019 Something. All rights reserved.</p>
+    </div>
+  </footer>
 </div>
