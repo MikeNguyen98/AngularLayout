@@ -1,21 +1,44 @@
-.service-header {
-  // font-weight: 600;
-  font-family: "Poppins", Arial, sans-serif;
-}
 .card {
   padding: 32px;
-  margin: 12px 0 12px 0;
+  margin: 0;
+  .service-header {
+    font-weight: 700;
+    font-family: "Poppins", Arial, sans-serif;
+    border-bottom: 1px solid #000000;
+    font-size: 20px;
+  }
+  .service-content {
+    margin-top: 12px;
+  }
 }
 .card:hover {
   // border: gray solid 1px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px #24678d;
 }
-
+.card-2 {
+  padding: 32px;
+  margin: 0;
+  border-radius: 10px;
+  border: 1px solid #24678d;
+}
 .section-1 {
-  min-height: 320px;
-  width: calc(100vw + 11px);
   background-color: #24678d;
-  margin-left: -20%;
-  animation: floating 3s ease-in-out infinite
+}
+
+.section-2,
+.section-3 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000000;
+}
+.contact{
+	font-family: 500;
+	background-color: #000000;
+	border: 1px solid #000;
+	color: #fff;
+	&:hover {
+		background-color: #FFF;
+		color: #000;
+		border: 1px solid #000;
+	}
 }
