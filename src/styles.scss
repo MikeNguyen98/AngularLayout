@@ -2,14 +2,20 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+// @font-face {
+//   font-family: "Manrope";
+//   src: local("Manrope"),
+//     url("/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+//   font-weight: normal;
+// }
 @font-face {
-  font-family: "Manrope";
-  src: local("Manrope"),
-    url("/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
+	font-family: "Poppins";
+	src: local("Poppins"), url("./assets/fonts/Poppins-Medium.otf") format("truetype");
 }
-
 :root {
   --custom-color-blue-1: #2f80ed;
   --custom-color-black: #000;
@@ -350,13 +356,13 @@ body {
 
 header,
 footer {
-  background-color: var(--color-bg-opa-primary);
+  background-color: var(--custom-color-white);
   position: sticky;
   top: 0;
   z-index: 999;
-  @media screen and (min-width: 576px) {
-    height: 72px;
-  }
+  // @media screen and (min-width: 576px) {
+  //   height: 64px;
+  // }
   .header {
     &__button-login {
       height: 32px;
