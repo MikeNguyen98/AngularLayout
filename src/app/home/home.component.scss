@@ -2,3 +2,12 @@
 	// font-weight: 600;
 	font-family: "Poppins",Arial,sans-serif;
 }
+.card {
+	padding: 32px;
+	margin: 12px 0 12px 0;
+}
+.card:hover {
+	// border: gray solid 1px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px #24678d;
+}

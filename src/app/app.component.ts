@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ajax } from 'rxjs/ajax';
 import { map } from 'rxjs/operators'
-
+import { Constant } from './const/constant';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators'
 export class AppComponent {
   title = '';
   data:any;
+	readonly CONSTANT = Constant
   constructor() {
      this.data = "";
      this.title = "Using RxJs with Angular";
