@@ -34,6 +34,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { CardModule } from 'primeng/card';
 import { NgModule } from '@angular/core';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
 	imports: [
@@ -43,6 +44,7 @@ import { NgModule } from '@angular/core';
 			ChipModule,
 			CheckboxModule,
 			DialogModule,
+			CarouselModule,
 			ButtonModule,
 			ConfirmDialogModule,
 			ToastModule,
@@ -82,6 +84,7 @@ import { NgModule } from '@angular/core';
 		DialogModule,
 		CardModule,
 		ButtonModule,
+		CarouselModule,
 		ConfirmDialogModule,
 		ToastModule,
 		TableModule,

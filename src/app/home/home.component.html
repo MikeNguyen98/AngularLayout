@@ -1,39 +1,99 @@
 <div class="block">
-	<div>banner</div>
-	<div class="grid">
-		<p-card class=" col-6">
-			<div class="service-header">Business Analyst</div>
-			<div class="service-content">
-				Our Business Analyst service will help you manage your most critical business processes, bridging the gap
-				between stakeholders and vendors or service providers
+	<div class="section-1">
+		<h1 class="text-center">Visualize your vision</h1>
+	</div>
+	<div class="section-2">
+		<div class="grid justify-content-between">
+			<div class="card col">
+				<div class="service-header">Business Analyst</div>
+				<div class="service-content">
+					Our Business Analyst service will help you manage your most critical business processes, bridging the gap
+					between stakeholders and vendors or service providers
+				</div>
 			</div>
-		</p-card>
-		<p-card class=" col-6"></p-card>
+			<div class="card col">
+				<ul style="list-style-type:disc">
+					<li>
+						Monitor, analyze and improve existing processes
+					</li>
+					Analyze business requirements and feasibilities
+					<li>
+						Clarify functional and technical specifications
+					</li>
+					<li>
+						Vendor sourcing and evaluation
+					</li>
+					<li>
+						Plan for system enhancements
+					</li>
+					<li>
+						Build training program and transition plan​
+					</li>
+					<li>
+						​Data mapping and migration
+					</li>
+				</ul>
+			</div>
 
-	</div>
-	<div class="grid">
-		<p-card class=" col-6"></p-card>
-		<p-card class=" col-6">
-			<div class="service-header">Process Automation</div>
-			<div class="service-content">
-				Process Automation service will help you automate repetitive tasks and bridge the gap between multiple systems
+		</div>
+		<div class="grid justify-content-between">
+			<div class="card col">Nội dung gì đó</div>
+			<div class="card col">
+				<div class="service-header">Process Automation</div>
+				<div class="service-content">
+					Process Automation service will help you automate repetitive tasks and bridge the gap between multiple systems
+				</div>
 			</div>
-		</p-card>
-	</div>
-	<div class="grid">
-		<p-card class=" col-6">
-			<div class="service-header">BI and ​​Data Analytics</div>
-			<div class="service-content">
-				Combining your data from different sources, analyzing and visualizing the data
+		</div>
+		<div class="grid justify-content-between">
+			<div class="card col">
+				<div class="service-header">BI and ​​Data Analytics</div>
+				<div class="service-content">
+					Combining your data from different sources, analyzing and visualizing the data
+				</div>
 			</div>
-		</p-card>
-		<p-card class=" col-6"></p-card>
+			<div class="card col">Nội dung gì đó</div>
+		</div>
 	</div>
-	<div>Our commitment</div>
+	<div class="section-3">
+		<div class="">SUCCESS STORIES</div>
+		<p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [circular]="true"
+			[responsiveOptions]="responsiveOptions">
+			<ng-template let-product pTemplate="item">
+				<div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+					<div class="mb-3">
+						<!-- <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name"
+							class="w-6 shadow-2" /> -->
+					</div>
+					<div>
+						<a href="{{product.link}}" class="mb-1">{{ product.name }}</a>
+					</div>
+				</div>
+			</ng-template>
+		</p-carousel>
+	</div>
+	<div class="section-4">
+		<div class="grid ">
+			<div class="col-8">
+				<div>
+					Have a project in mind? Let's get to work
+				</div>
+				<div>
+					Kyanon Digital is trusted by Samsung, Unilever, Nippon Paint, and Central Retails. Start your project with a
+					click.
+				</div>
+			</div>
+			<div class="col-4">
+				<button pButton pRipple type="button" label="Talk To Our Expert" icon="pi pi-envelope" class="p-button-info"
+					(click)="contactUs()"></button>
+			</div>
+		</div>
+	</div>
+	<!-- <div>Our commitment</div>
 	<div>Why choose us</div>
 	<div>ads banner 2</div>
 	<div>case studies</div>
 	<div>Client satisfaction</div>
-	<div>ads banner 3</div>
+	<div>ads banner 3</div> -->
 	<!-- <button pButton pRipple type="button" icon="pi pi-power-off" class="p-button-rounded p-button-plain"></button> -->
 </div>
